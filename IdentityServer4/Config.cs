@@ -44,6 +44,7 @@ namespace IdentityServer4
                 AllowedGrantTypes=GrantTypes.ResourceOwnerPassword, // 授权类型为资源拥有者
                 AllowedScopes={ "sample_api" } // 设置该客户端允许访问的api范围
             },
+
             // 基于OIDC客户端
             new Client
             {

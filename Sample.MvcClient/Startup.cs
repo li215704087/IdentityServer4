@@ -30,7 +30,7 @@ namespace Sample.MvcClient
             services.AddAuthentication(options => {
                 options.DefaultScheme = "Cookies";
                 options.DefaultChallengeScheme = "oidc";
-                options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;//加上这句
+                //options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
              .AddCookie("Cookies")
              .AddOpenIdConnect("oidc", options => {
@@ -63,7 +63,7 @@ namespace Sample.MvcClient
 
             app.UseRouting();
 
-            
+            // 使用cookie
             app.UseCookiePolicy();
             // 添加认证中间件
             app.UseAuthentication();
